@@ -8,10 +8,11 @@
 
     opacity: 1;
     transition: opacity 250ms var(--anitimfnc);
-    &.is-hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
+}
+
+.backdrop--is-hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal {
@@ -35,7 +36,7 @@
         transform 250ms var(--anitimfnc),
         box-shadow 250ms var(--anitimfnc);
     
-    .backdrop.is-hidden & {
+    .backdrop--is-hidden & {
         transform: translate(-50%, -50%) scale(0);
     }
 }
@@ -64,9 +65,10 @@
 .modal__title {
     margin-bottom: 12px;
 
-    font-size: 20px;
-    font-weight: 700;
-    line-height: calc(23/20);
+    @include font(700, 20px, 23px);
+    // font-size: 20px;
+    // font-weight: 700;
+    // line-height: calc(23/20);
     text-align: center;
 
     color: var(--txtblack);
@@ -88,10 +90,11 @@
 .modal__label {
     margin-bottom: 4px;
 
-    font-weight: 400;
-    font-size: 12px;
-    line-height: calc(14/12);
-    letter-spacing: 0.01em;
+    @include font(null, 12px, 14px, 0.01em);
+    // font-weight: 400;
+    // font-size: 12px;
+    // line-height: calc(14/12);
+    // letter-spacing: 0.01em;
 }
 
 .modal__input {
@@ -101,9 +104,10 @@
     border-radius: 4px;
     width: 100%;
 
-    font-size: 14px;
-    line-height: calc(16/14);
-    letter-spacing: 0.01em;
+    @include font(null, 14px, 16px, 0.01em);
+    // font-size: 14px;
+    // line-height: calc(16/14);
+    // letter-spacing: 0.01em;
     transition: border-color 250ms var(--anitimfnc);
     // &:hover {
     //     cursor: pointer;
@@ -149,45 +153,7 @@
     }
 }
 
-.modal__license {
-    margin: 20px auto 0;
-    font-size: 14px;
-    line-height: calc(24/14);
-    letter-spacing: 0.03em;
-}
-
-.modal__check-label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal__check-label span {
-    display: flex;
-    width: 16px;
-    height: 15px;
-    margin-right: 7px;
-    border: 2px solid var(--brandblack);
-    border-radius: 2px;
-    transition: background-color 250ms var(--anitimfnc);
-}
-
-.modal__check:checked+.modal__check-label span {
-    background-color: var(--brandblue);
-    border: none;
-}
-
-.modal__check:focus+.modal__check-label span {
-    border-color: var(--brandblue);
-}
-
-.modal__field-link {
-    text-decoration: underline;
-    margin-left: 0.5em;
-    &:hover, &:focus {
-        text-decoration: none;
-    }
-}
+// @import './license-agree';
 
 .modal__submitbtn {
     display: block;

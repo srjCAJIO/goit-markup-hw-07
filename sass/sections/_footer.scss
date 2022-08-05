@@ -58,14 +58,13 @@
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-    Font-size: 16px;
-    Line-height: calc(20/16);
-    Letter-spacing: 0, 03;
+
+    @include font(null, 16px, 20px);
+    // Font-size: 16px;
+    // Line-height: calc(20/16);
+    // Letter-spacing: 0, 03;
     color: var(--white-color);
     &::placeholder {
-        Font-size: 16px;
-        Line-height: calc(20/16);
-        Letter-spacing: 0, 03;
         color: var(--footersubcolor);
     }
 }

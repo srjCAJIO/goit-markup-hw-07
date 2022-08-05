@@ -6,8 +6,9 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    font-size: 16px;
-    line-height: 1.19;
+    @include font(null, 16px, 19px);
+    // font-size: 16px;
+    // line-height: 1.19;
     text-align: center;
     background-color: var(--white-color);
     &:nth-child(4n+1) {
@@ -22,8 +23,9 @@
 }
 
 .member-card__name {
-    font-size: inherit;
-    font-weight: 500;
+    @include font(500, inherit);
+    // font-size: inherit;
+    // font-weight: 500;
     color: var(--txtblack);
     margin-bottom: 10px;
 }

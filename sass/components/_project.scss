@@ -10,7 +10,7 @@
 
 .project__link {
     display: block;
-    color: inherit;
+    color: var(--txtgrey);
     transition: box-shadow 250ms var(--anitimfnc);
     &:hover,
     &:focus {
@@ -34,8 +34,10 @@
     align-items: center;
     height: 100%;
     padding: 24px;
-    font-size: 18px;
-    line-height: 1.56;
+
+    @include font(null, 18px, 28px);
+    // font-size: 18px;
+    // line-height: 1.56;
     color: var(--white-color);
     background-color: rgba(33, 150, 243, 0.9);
 
@@ -65,16 +67,18 @@
 
 .project__name {
     /* outline: 1px solid red; */
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    @include font(700, 18px, 36px, 0.06em);
+    // font-weight: 700;
+    // font-size: 18px;
+    // line-height: 2;
+    // letter-spacing: 0.06em;
     color: var(--txtblack);
 }
 
 .project__type {
     /* outline: 1px solid red; */
     margin-top: 4px;
-    font-size: 16px;
-    line-height: 1.88;
+    @include font(null, 16px, 30px);
+    // font-size: 16px;
+    // line-height: 1.88;
 }

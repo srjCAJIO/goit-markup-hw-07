@@ -1,4 +1,5 @@
 @import './utils/variables';
+@import './utils/mixins';
 @import './base/reset';
 @import './base/common';
 
@@ -22,6 +23,7 @@
 // студия
 @import './sections/hero';
 @import './components/modal';
+@import './components/license-agree';
 @import './sections/benefits';
 @import './sections/occupation';
 @import './sections/team';

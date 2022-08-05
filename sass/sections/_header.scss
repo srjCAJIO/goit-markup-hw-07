@@ -1,6 +1,7 @@
 .page-header {
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    @include font($fw:500, $ls:0.02em);
+    // font-weight: 500;
+    // letter-spacing: 0.02em;
     border-bottom: 1px solid var(--bdrcolor);
     background-color: var(--white-color);
     

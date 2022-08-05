@@ -5,11 +5,12 @@
     /* display: block;
     padding-top: 24px;
     padding-bottom: 25px; */
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+    font-family: var(--logofont);
+    @include font (700, 26px, 31px);
+    // font-weight: 700;
+    // font-size: 26px;
+    // line-height: 1.19;
+    // letter-spacing: 0.03em;
     color: var(--brandblack);
     text-decoration: none;
 }

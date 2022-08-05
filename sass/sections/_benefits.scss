@@ -28,10 +28,12 @@
 
 .benefits__title {
     /* outline: 1px solid red; */
-    font-size: inherit;
-    font-weight: 700;
+    
+    @include font(700, inherit);
+    // font-size: inherit;
+    // font-weight: 700;
     text-transform: uppercase;
-    color: var(--textblack);
+    color: var(--txtblack);
 }
 
 .benefits__descr {
@@ -40,5 +42,5 @@
     padding-top: 1px;
     padding-bottom: 2px;
 
-    line-height: 1.71;
+    @include font($lh:24px);
 }
